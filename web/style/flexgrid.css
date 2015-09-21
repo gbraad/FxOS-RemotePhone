@@ -1,0 +1,103 @@
+button, input[type=text]
+{
+  width: 100%;
+  width: 100%;
+  background: none;
+  border: 0;
+  outline: 0;
+  color: white;
+  
+  font-size: 1em;
+}
+
+.center {
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  flex: 1;
+}
+
+.row {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.col {
+  flex: 1 1 1%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.col-span-1 {
+  flex-basis: 8.3333%;
+}
+
+.col-span-2 {
+  flex-basis: 16.6666%; 
+}
+
+.col-span-3 {
+  flex-basis: 25%;
+}
+
+.col-span-4 {
+  flex-basis: 33.3333%;
+}
+
+.col-span-5 {
+  flex-basis: 41.6666%;
+}
+
+.col-span-6 {
+  flex-basis: 50%;
+}
+
+.col-span-7 {
+  flex-basis: 58.3333%;
+}
+
+.col-span-8 {
+  flex-basis: 66.6666%;
+}
+
+.col-span-9 {
+  flex-basis: 75%;
+}
+
+.col-span-10 {
+  flex-basis: 83.3333%;
+}
+
+.col-span-11 {
+  flex-basis: 91.6666%;
+}
+
+.col-span-12 {
+  flex-basis: 100%;
+}
+
+body {
+  background-color : black;
+  margin: 0;
+  color: white;
+  font-family: sans-serif;
+  font-size: 3em;
+  
+  display: flex;
+  flex-direction: column;
+  
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.row {
+
+}
+
+.col {
+  border: 1px solid rgba(255,255,255,0.1);
+}

@@ -1,0 +1,41 @@
+{
+	"version": "1",
+	"name": "RemotePhone",  
+	"type": "certified",
+	"runcible": true,
+	"launch_path": "/index.html",
+	"description": "Firefox OS RemotePhone",
+	"icons": {
+	    "16": "/images/icon_16.png",
+	    "48": "/images/icon_48.png",
+	    "128": "/images/icon_128.png",
+	    "256": "/images/icon_256.png",
+	    "512": "/images/icon_512.png"
+	},
+	"developer": {
+		"name": "Gerard Braad",
+		"url": "http://gbraad.nl"
+	},
+	"installs_allowed_from": ["*"],
+	"default_locale": "en",
+	"permissions": {
+    "device-storage:sdcard":{ "access": "readwrite" },
+    "device-storage:pictures":{ "access": "readwrite" },
+    "device-storage:videos":{ "access": "readwrite" },
+    "device-storage:music":{ "access": "readcreate" },
+    "device-storage:apps":{ "access": "readonly" },
+    "settings":{ "access": "readwrite" },
+    "storage":{},
+    "idle":{},
+    "background-sensors":{},
+    "permissions":{},
+    "audio-channel-notification":{},
+    "audio-channel-content":{},
+    "downloads":{},
+    "systemXHR": {},
+		"wifi-manage":{},
+    "tcp-socket": {},
+    "udp-socket": {},
+    "telephony": {}
+	}
+}

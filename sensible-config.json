@@ -1,0 +1,7 @@
+{
+	"name" : "FxOS RemotePhone",
+	"type" : "_sensible._tcp.local",
+	"port" : 5088,
+	"description" : "RemotePhone on FirefoxOS",
+	"hostname" : "remotephone.local"
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<title>Remote Phone</title>
+		<meta charset="utf-8">
+		<meta name="HandheldFriendly" content="True">
+		<meta http-equiv="cleartype" content="on">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+		<link rel="stylesheet" href="./style/flexgrid.css">
+</head>
+<body>
+
+		<div class="box">
+			<div class="row">
+				<div class="center col col-span-12"><input id="numberToDial" type="text">&nbsp;</input></div>
+				<div class="center col col-span-4"><button>1</button></div>
+				<div class="center col col-span-4"><button>2</button></div>
+				<div class="center col col-span-4"><button>3</button></div>
+				<div class="center col col-span-4"><button>4</button></div>
+				<div class="center col col-span-4"><button>5</button></div>
+				<div class="center col col-span-4"><button>6</button></div>
+				<div class="center col col-span-4"><button>7</button></div>
+				<div class="center col col-span-4"><button>8</button></div>
+				<div class="center col col-span-4"><button>9</button></div>
+				<div class="center col col-span-4"><button>*</button></div>
+				<div class="center col col-span-4"><button>0</button></div>
+				<div class="center col col-span-4"><button>#</button></div>
+				<div class="center col col-span-12"><button>Dial</button></div>
+			</div>
+		</div>
+	
+		<script>
+
+		var onLoad = function() {
+
+				var buttons = document.querySelectorAll('button');
+
+				var handleButtonClick = function(ev) {
+					var val = ev.target.textContent; 
+					switch(val) {
+						case "Dial":
+							handleDial();
+							break;
+						default:
+							handleInput(val);
+							break;
+					}
+				}
+		
+				var handleInputClick = function(ev) {
+					console.log("clicked");
+					var el = ev.target;
+					el.value.slice(0, - 1);
+				}
+
+				for(var i = 0; i < buttons.length; i++) {
+					var button = buttons.item(i);
+				button.addEventListener("click", handleButtonClick, false);
+				}
+
+				var numberToDial = document.querySelector('#numberToDial');
+				numberToDial.addEventListener("click", handleInputClick. false);        
+		}
+
+		var handleDial = function() {
+				var numberToDial = document.querySelector('#numberToDial');
+
+				var params = "number=" + numberToDial.value;
+				var url = window.location + "dial/number?" + params;
+				var req = new XMLHttpRequest();
+				req.open ("GET", url, true);
+
+				req.send();
+				if(req.status == 0) {
+					console.log("error");
+				}
+		}
+
+		var handleInput = function(val) {
+			var numberToDial = document.querySelector('#numberToDial');
+			numberToDial.value += val; 
+		}
+
+		window.onload = onLoad();
+
+		</script>
+
+</body>
+</html>
